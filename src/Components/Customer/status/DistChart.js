@@ -134,15 +134,13 @@ const Dist = () => {
     };
 
     const generatePastelColors = (numColors) => {
-        const colors = [];
+        const colors = ['#9FBED2', '#FFB6C1', '#FFDAB9', '#FFFACD', '#FFC0CB', '#ADD8E6', '#E0FFFF', '#F5DEB3', '#FAFAD2', '#C1E1C1'];
+        const palette = [];
         for (let i = 0; i < numColors; i++) {
-            const hue = Math.floor(Math.random() * 360);
-            const pastelColor = `hsl(${hue}, 50%, 75%)`;
-            colors.push(pastelColor);
+            palette.push(colors[i % colors.length]);
         }
-        return colors;
+        return palette;
     };
-
     // 두 번째 useEffect: chartData가 업데이트된 후 chartNames 설정
     React.useEffect(() => {
         const savedSettings = localStorage.getItem('customerStatusSettings');
