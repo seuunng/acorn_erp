@@ -66,4 +66,4 @@
 
 ---
 
-더욱 자세한 내용 및 소스 코드는 [GitHub 레포지토리](https://github.com/your-repository)에서 확인하실 수 있습니다. 프로젝트에 관심을 가져주셔서 감사합니다.
+더욱 자세한 내용 및 소스 코드는 [GitHub 레포지토리](https://github.com/seuunng/acorn_erp)에서 확인하실 수 있습니다. 프로젝트에 관심을 가져주셔서 감사합니다.
