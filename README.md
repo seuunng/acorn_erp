@@ -1,70 +1,69 @@
-# Getting Started with Create React App
+# Acorn ERP 🐿️
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## 프로젝트명
+**소상공인을 위한 ERP프로그램**
 
-## Available Scripts
+## 프로젝트 목적
+1. 소상공인들의 사업운영 편리를 위한 웹 기반 ERP 시스템 개발
+2. 데이터의 다양한 통계 시각화 자료를 통해 사업 방향 제시
 
-In the project directory, you can run:
+## 프로젝트 개요
+1. **회원가입, 로그인 등 사용자 관리 페이지**
+2. **소상공인의 사업관리를 위한 페이지**
+   - 고객 정보 관리 및 고객 관련 데이터 시각화 페이지
+   - 판매관리
+   - 재고관리
+   - 예약관리
+3. **소상공인 커뮤니티**
 
-### `npm start`
+## 사용 언어 및 개발 환경
+- **프론트엔드**: React
+- **백엔드**: SpringBoot, Spring JPA, RESTful API, JUnit
+- **데이터베이스**: Oracle
+- **클라우드 서비스**: AWS EC2
+- **API 활용**: 공공 API 활용
+- **소프트웨어 아키텍처**: 레이어드 모델
+- **개발 툴**: Visual Studio Code, Spring Tool Suite 4, SQL Developer, Windows, Github, Gradle, npm
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 주요 기능 및 설명
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### 사용자 관리 페이지
+- **회원가입, 로그인**: 사용자 관리 및 인증 기능 제공
 
-### `npm test`
+### 소상공인 사업관리 페이지
+1. **고객 정보 관리 및 시각화**
+   - **표로 보여주는 페이지**:
+     - CRUD, 검색, 정렬, 페이징 기능 구현
+     - 엑셀 및 PDF 파일 출력 기능 구현
+     - 페이지 행수 조절 기능 구현
+   - **고객의 상세 정보를 보여주는 모달 페이지**:
+     - 수정모드로 변환 및 수정 가능
+     - 특이사항 추가 가능
+     - 다른 페이지에서도 고객이름 클릭 시 모달 실행
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+2. **고객 관련 데이터 시각화 페이지**
+   - **고객 유치 목표 설정 및 진행 상황 표시**: 막대 그래프 형태
+   - **고객 분포도**: 성별, 연령별, 지역별 도넛 그래프
+   - **고객 선호도 차트**: 매출, 거래횟수, 평점 순 상품 Top3 차트
+   - **고객 랭킹 차트**: 총 거래 금액, 총 거래 횟수 높은 순 랭킹, 전월 대비 변동 아이콘(▲, ▼, [new])
 
-### `npm run build`
+3. **데이터 시각화 설정 모달 페이지**
+   - 고객 유치 목표 설정 변경
+   - 데이터 기간 설정
+   - 보여질 메뉴 선택 기능
+   - 랭킹 차트 보여질 순위 선택 기능
+   - 지역분포도 범위 선택(공공 API 활용)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+4. **고객 분포 데이터 테이블**
+   - 성별, 연령별, 지역별 그룹 부여
+   - 각 그룹별 고객 등급 분포 작성
+   - 지역 선택에 따라 데이터 변화 (전국, 시도 선택)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+5. **고객 거래 정보 데이터 테이블**
+   - 고객의 총 거래금액, 총 거래횟수, 많이 거래한 상품명 추출
+   - 총계 행 추가: 총 금액, 총 횟수, 평균 점수 표시
+   - 선택에 따른 거래금액/거래횟수 별 정렬 기능
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+더욱 자세한 내용 및 소스 코드는 [GitHub 레포지토리](https://github.com/your-repository)에서 확인하실 수 있습니다. 프로젝트에 관심을 가져주셔서 감사합니다.

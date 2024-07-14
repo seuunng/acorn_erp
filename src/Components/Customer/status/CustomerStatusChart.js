@@ -10,7 +10,7 @@ import TopProd from './TopProdChart.js'
 import "../Customer.css"
 
 const CustomerMain = () => {
-  //맨위로 버튼 만들다: 실패
+  //맨위로 버튼 만들다
   const [showButton, setShowButton] = React.useState(false);
 
   React.useEffect(() => {

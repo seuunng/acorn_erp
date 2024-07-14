@@ -92,6 +92,10 @@ const LoginForm = () => {
         <Link to="/signUp" style={{ textDecoration: 'none', color: 'black' }}>
           회원가입
         </Link>
+        &nbsp;&nbsp;|&nbsp;&nbsp;
+        <Link to="/layout" style={{ textDecoration: 'none', color: 'red' }}>
+          <strong>게스트 로그인</strong>
+        </Link>
       </div>
     </div>
   );
