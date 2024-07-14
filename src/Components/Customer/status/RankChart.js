@@ -22,6 +22,7 @@ const Rank = () => {
 
     const [rows, setRows] = React.useState([]);
 
+    //리액트 유스풀
     React.useEffect(() => {
         const savedSettings = localStorage.getItem('customerStatusSettings');
         const fetchTableData = async () => {
@@ -62,7 +63,7 @@ const Rank = () => {
         fetchTableData();
     }, []);
 
-
+    //랭크차트
     const getRankChange = (rank, prevRank) => {
         if (prevRank === null || prevRank === undefined || prevRank > rangeValue) {
             return { icon: <span className="badge text-bg-success">New</span>, text: '' }; // new
@@ -75,7 +76,7 @@ const Rank = () => {
         }
         return { icon: "-", text: '' }; // 동일
     };
-
+    //숫자 포맷: 셋째 자리 컴마
     const formatNumber = (num) => {
         return num.toLocaleString();
     };
@@ -98,14 +99,14 @@ const Rank = () => {
             console.error('Error saving changes:', error);
         }
     }
+    //날짜 포맷
     const formatDate = (dateString) => {
         const options = { year: 'numeric', month: '2-digit', day: '2-digit' };
         return new Date(dateString).toLocaleDateString(undefined, options);
       };
-    
+    //상세보기 정보 불러오기
     const fetchCustomerDetails = async () => {
         try {
-           //테이블 데이터 호출
         const response_tableData = await instance.get('/customer/getAllList');
         const data = response_tableData.data.map(item => ({
           ...item,
@@ -138,7 +139,7 @@ const Rank = () => {
             return null;
         }
     };
-
+    //상세보기 모달보기 함수
     const handleNameClick = async (customer) => {
         const customerDetails = rows.find(row => row.customerId === customer.customerId);
         if (customerDetails) {
